@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="zd6_1_BelozerovKlim.SecondPage">
+
+    <Grid ColumnSpacing="0" RowSpacing="0">
+        <!-- Определяем строки и столбцы -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*" />
+            <!-- Верхняя строка -->
+            <RowDefinition Height="3*" />
+            <!-- Центральная строка -->
+            <RowDefinition Height="1*" />
+            <!-- Нижняя строка -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <!-- Первый столбец -->
+            <ColumnDefinition Width="1*" />
+            <!-- Второй столбец -->
+            <ColumnDefinition Width="1*" />
+            <!-- Третий столбец -->
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Верхняя строка -->
+        <BoxView Grid.Row="0" Grid.Column="0" BackgroundColor="Red" />
+        <BoxView Grid.Row="0" Grid.Column="1" BackgroundColor="Green" />
+        <BoxView Grid.Row="0" Grid.Column="2" BackgroundColor="Blue" />
+        <BoxView Grid.Row="0" Grid.Column="3" BackgroundColor="Orange" />
+
+        <!-- Большая желтая область -->
+        <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" BackgroundColor="Yellow" />
+
+        <!-- Зеленая полоса внутри желтой области -->
+        <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Green"
+                 Margin="100,150,-110,100" />
+
+        <!-- Оранжевая полоса справа -->
+        <BoxView Grid.Row="1" Grid.Column="3" Grid.RowSpan="1" BackgroundColor="Orange" />
+
+        <!-- Черная горизонтальная полоса -->
+        <BoxView Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HeightRequest="100"
+                 VerticalOptions="End" BackgroundColor="Black" />
+
+        <!-- Нижняя строка -->
+        <BoxView Grid.Row="2" Grid.Column="0" BackgroundColor="Cyan" />
+        <BoxView Grid.Row="2" Grid.Column="1" BackgroundColor="Magenta" />
+        <BoxView Grid.Row="2" Grid.Column="2" BackgroundColor="Yellow" />
+        <BoxView Grid.Row="2" Grid.Column="3" BackgroundColor="Black" />
+
+        
+    </Grid>
+
+</ContentPage>
